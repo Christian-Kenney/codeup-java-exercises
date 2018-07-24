@@ -4,32 +4,32 @@ public class ControlFlowExercises {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        long i = 1;
-        while(i < 100){
-            if(i % 3 == 0 && i % 5 == 0){
-                System.out.println("FizzBuzz");
-                i++;
-            } else if(i % 3 == 0){
-                System.out.println("Fizz");
-                i++;
-            } else if(i % 5 == 0){
-                System.out.println("Buzz");
-                i++;
-            }else{
-                System.out.println(i);
-                i++;
-            }
-        }
-        System.out.print("What number do you want to go up to? ");
-        int userNum = sc.nextInt();
-        System.out.println("Here is your table! \n");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        for(var x = 1; x <= userNum; x++){
-            int squared = (x * x);
-            int cubed = (x * x * x);
-            System.out.println(x + "      | " + squared + "       | " + cubed);
-        }
+//        long i = 1;
+//        while(i < 100){
+//            if(i % 3 == 0 && i % 5 == 0){
+//                System.out.println("FizzBuzz");
+//                i++;
+//            } else if(i % 3 == 0){
+//                System.out.println("Fizz");
+//                i++;
+//            } else if(i % 5 == 0){
+//                System.out.println("Buzz");
+//                i++;
+//            }else{
+//                System.out.println(i);
+//                i++;
+//            }
+//        }
+//        System.out.print("What number do you want to go up to? ");
+//        int userNum = sc.nextInt();
+//        System.out.println("Here is your table! \n");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//        for(var x = 1; x <= userNum; x++){
+//            int squared = (x * x);
+//            int cubed = (x * x * x);
+//            System.out.println(x + "      | " + squared + "       | " + cubed);
+//        }
 
         boolean answer = true;
         while(answer){
@@ -48,9 +48,10 @@ public class ControlFlowExercises {
             }
             System.out.println("Do you want to enter another grade? Y or N?");
             String response = sc.next();
-            if(response.charAt(0) != 'Y'){
-                answer = false;
-            }
+            answer = response.equals("Y");
+//            if(response.charAt(0) != 'Y'){
+//                answer = false;
+//            }
         }
 
     }
