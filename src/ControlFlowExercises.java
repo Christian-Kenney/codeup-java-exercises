@@ -48,7 +48,7 @@ public class ControlFlowExercises {
             }
             System.out.println("Do you want to enter another grade? Y or N?");
             String response = sc.next();
-            answer = response.equals("Y");
+            answer = response.equalsIgnoreCase("y");
 //            if(response.charAt(0) != 'Y'){
 //                answer = false;
 //            }
