@@ -16,13 +16,33 @@ public class MethodsExercises {
 //        int userNumber = getInteger(1, 10);
 //        System.out.println(userNumber);
 //        factorial();
-//        diceRoll();
+        diceRoll();
 //        guess();
 //       countVowels("AaBbEeIiOoUu");
 //        countAs("aaaa");
-        calculator();
+//        calculator();
 
     }
+
+    public static void diceRoll(){
+        boolean userCont = true;
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+        while(userCont){
+            System.out.println("How many sides on the dice? ");
+            int sides = sc.nextInt();
+            int roll1 = rand.nextInt(sides);
+            int roll2 = rand.nextInt(sides);
+            System.out.println("Dice 1: " + (roll1 + 1));
+            System.out.println("Dice 2: " + (roll2 + 1));
+            System.out.println("Do you want to roll again? 'Y' or 'N' " );
+            String userAnswer = sc.next().toLowerCase();
+            if(userAnswer.equals("n")){
+                userCont = false;
+            }
+        }
+    }
+
     public static int addition(int num1, int num2){
         return num1 + num2;
     }
@@ -96,24 +116,7 @@ public class MethodsExercises {
         }
 
     }
-    public static void diceRoll(){
-        boolean userCont = true;
-        Scanner sc = new Scanner(System.in);
-        Random rand = new Random();
-        while(userCont){
-            System.out.println("How many sides on the dice? ");
-            int sides = sc.nextInt();
-            int roll1 = rand.nextInt(sides);
-            int roll2 = rand.nextInt(sides);
-            System.out.println("Roll 1: " + (roll1 + 1));
-            System.out.println("Roll 2: " + (roll2 + 1));
-            System.out.println("Do you want to roll again? 'Y' or 'N' " );
-            String userAnswer = sc.next();
-            if(userAnswer.equals("N")){
-                userCont = false;
-            }
-        }
-    }
+
 
     public static void guess(){
         Random rand = new Random();
