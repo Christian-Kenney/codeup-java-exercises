@@ -18,7 +18,9 @@ public class MethodsExercises {
 //        factorial();
 //        diceRoll();
 //        guess();
-
+//       countVowels("AaBbEeIiOoUu");
+//        countAs("aaaa");
+        calculator();
 
     }
     public static int addition(int num1, int num2){
@@ -70,18 +72,18 @@ public class MethodsExercises {
             Scanner sc = new Scanner(System.in);
             long userNumber = sc.nextLong();
             long total = userNumber * (userNumber - 1);
-            System.out.println("first total: " + total);
+//            System.out.println("first total: " + total);
             for (long x = userNumber - 2; x > 0; x--) {
-                System.out.println("total: " + total);
-                System.out.println("x: " + x);
+//                System.out.println("total: " + total);
+//                System.out.println("x: " + x);
                 total += total * (x - 1);
             }
             System.out.print(userNumber + "! = ");
             for (int i = 1; i <= userNumber; i++) {
                 if (i == 1) {
-                    System.out.print(i + " ");
+                    System.out.print(i + "");
                 } else {
-                    System.out.print("x " + i);
+                    System.out.print(" x " + i);
                 }
             }
             System.out.println("   = " + total);
@@ -165,4 +167,58 @@ public class MethodsExercises {
         }
     }
 
+    public static void countVowels(String input){
+       int total = countAs(input, 'a');
+        total += countAs(input, 'e');
+        total += countAs(input, 'i');
+        total += countAs(input, 'o');
+        total += countAs(input, 'u');
+        System.out.println(total);
+    }
+    public static int countAs(String input, char input2){
+        int counter = 0;
+        char a;
+        char b = input2;
+        for(int i = 0; i < input.length(); i++){
+            a = input.charAt(i);
+            if(Character.toLowerCase(a) == Character.toLowerCase(b)){
+                counter++;
+            }
+        }
+        return counter;
+    }
+    public static void calculator(){
+        Scanner sc = new Scanner(System.in);
+        int num1, num2;
+        String mathSymbol;
+
+        boolean userCont = true;
+        while(userCont) {
+            System.out.println("Enter your first number");
+            num1 = sc.nextInt();
+            System.out.println("Enter your math symbol: +,-,+,*");
+            mathSymbol = sc.next();
+            System.out.println("Enter your second number");
+            num2 = sc.nextInt();
+            if (mathSymbol.equals("+")) {
+                System.out.println(num1 + num2);
+            }
+            else if (mathSymbol.equals("-")) {
+                System.out.println(num1 - num2);
+            }
+            else if (mathSymbol.equals("*")) {
+                System.out.println(num1 * num2);
+            }
+            else if (mathSymbol.equals("/")) {
+                System.out.println(num1 / num2);
+            }else{
+                System.out.println("You didnt follow the rules");
+            }
+            System.out.println("Do you want to roll again? 'Y' or 'N' " );
+            String userAnswer = sc.next();
+            if(userAnswer.equals("N")){
+                userCont = false;
+            }
+        }
+    }
 }
