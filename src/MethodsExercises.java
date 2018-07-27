@@ -16,11 +16,14 @@ public class MethodsExercises {
 //        int userNumber = getInteger(1, 10);
 //        System.out.println(userNumber);
 //        factorial();
-        diceRoll();
+//        diceRoll();
 //        guess();
 //       countVowels("AaBbEeIiOoUu");
 //        countAs("aaaa");
 //        calculator();
+
+        int x = 5 * 4 % 3;
+        System.out.println(x);
 
     }
 
