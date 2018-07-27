@@ -21,9 +21,7 @@ public class MethodsExercises {
 //       countVowels("AaBbEeIiOoUu");
 //        countAs("aaaa");
 //        calculator();
-
-        int x = 5 * 4 % 3;
-        System.out.println(x);
+    countVowelss("aaaAAAeeEEbbBBIIOOUU");
 
     }
 
@@ -226,5 +224,42 @@ public class MethodsExercises {
                 userCont = false;
             }
         }
+    }
+
+    public static String countVowelss(String userInput){
+        int countAs = 0;
+        int countEs = 0;
+        int countIs = 0;
+        int countOs = 0;
+        int countUs = 0;
+        int charIndex = 0;
+        char charAtIndex = userInput.charAt(charIndex);
+//        System.out.println(charAtIndex);
+        for (charIndex = 0; charIndex <= userInput.length(); charIndex++){
+            charIndex++;
+//            System.out.println(charIndex);
+            if (charAtIndex == 'a') {
+                countAs++;
+            } else if(charAtIndex == 'e'){
+                countEs++;
+            } else if(charAtIndex == 'i'){
+                countIs++;
+            } else if(charAtIndex == 'o'){
+                countOs++;
+            } else if(charAtIndex == 'u'){
+                countUs++;
+            }
+        }
+        String returnString = userInput + "\nA\'s: " + countAs
+                + "\nE\'s: " + countEs
+                + "\nI\'s: " + countIs
+                + "\nO\'s: " + countOs
+                + "\nU\'s: " + countUs;
+        System.out.println(returnString);
+        return userInput + "\nA\'s: " + countAs
+                + "\nE\'s: " + countEs
+                + "\nI\'s: " + countIs
+                + "\nO\'s: " + countOs
+                + "\nU\'s: " + countUs;
     }
 }
