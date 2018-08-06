@@ -3,7 +3,7 @@ package shapes;
 public class Rectangle extends Quadrilateral implements Measurable {
 
     public Rectangle(double l, double w){
-        super(l, w);
+//        super(l, w);
     }
 
     @Override

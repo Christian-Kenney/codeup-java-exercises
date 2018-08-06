@@ -3,7 +3,7 @@ package shapes;
 public class Square extends Quadrilateral {
 
     public Square(double l){
-        super(l, l);
+//        super(l, l);
     }
     @Override
     void setLength(double length) {
