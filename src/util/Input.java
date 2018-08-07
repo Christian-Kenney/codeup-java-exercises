@@ -19,20 +19,30 @@ public boolean yesNo(){
     }
 
 }
-public int getInt(int num1, int num2){
-    System.out.println("Enter a number between " + num1 + " and " + num2);
-    int userInput = sc.nextInt();
-    boolean correct = true;
-    while(correct) {
-        if (userInput > num1 && userInput < num2) {
-            correct = false;
-        }else{
-            System.out.println("Try again");
-            userInput = sc.nextInt();
-        }
+public int getInt() {
+    String userInput = this.getString();
+    int number = 0;
+    try {
+        number = Integer.valueOf(userInput);
+    } catch (Exception e) {
+        System.out.println();
+        getInt();
     }
-    return userInput;
+    return number;
 }
+//    System.out.println("Enter a number between " + num1 + " and " + num2);
+//        int userInput = sc.nextInt();
+//            boolean correct = true;
+//            while (correct) {
+//                if (userInput > num1 && userInput < num2) {
+//                    correct = false;
+//                } else {
+//                    System.out.println("Try again");
+//                    userInput = sc.nextInt();
+//                }
+//            }
+//            return userInput;
+
 
     public double getDouble(double num1, double num2){
         System.out.println("Enter a number between " + num1 + " and " + num2);

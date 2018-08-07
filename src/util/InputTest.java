@@ -6,11 +6,11 @@ public class InputTest {
         Input test = new Input();
         String userInput = test.getString();
         boolean userBoo = test.yesNo();
-        int userInt = test.getInt(2, 9);
+//        int userInt = test.getInt(2, 9);
         double userDub = test.getDouble(1.5, 8.5);
         System.out.println(userInput);
         System.out.println(userBoo);
-        System.out.println(userInt);
+//        System.out.println(userInt);
         System.out.println(userDub);
 
     }
